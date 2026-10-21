@@ -75,15 +75,15 @@ button:focus-visible, a:focus-visible {
 .walker-white { --walk-duration: 39s; --walk-delay: -29s; left: 68%; animation-duration: var(--walk-duration); animation-delay: var(--walk-delay); z-index: 1; }
 .actor-figure { position: relative; isolation: isolate; display: block; width: 100%; height: 164px; transform-origin: center bottom; transition: transform .2s; }
 .actor-sprite { position: relative; z-index: 1; display: block; width: 100%; height: 100%; background-repeat: no-repeat; background-size: 400% 100%; image-rendering: pixelated; filter: drop-shadow(0 8px 3px rgba(5,10,22,.3)); animation: walk-frames .96s steps(3,end) infinite; transition: filter .18s ease; }
-.sprite-host { background-image: url("host-sprite-sidewalk.png"); }
-.walker-host[data-outfit="hoodie"] .actor-sprite { background-image: url("host-outfit-hoodie.png"); }
-.walker-host[data-outfit="casual"] .actor-sprite { background-image: url("host-outfit-casual.png"); }
-.walker-host[data-outfit="pajamas"] .actor-sprite { background-image: url("host-outfit-pajamas.png"); }
-.walker-host[data-outfit="sport"] .actor-sprite { background-image: url("host-outfit-sport.png"); }
-.walker-host[data-outfit="bunny"] .actor-sprite { background-image: url("host-outfit-bunny.png"); }
-.walker-host[data-outfit="denim"] .actor-sprite { background-image: url("host-outfit-denim.png"); }
-.sprite-black { background-image: url("black-cat-sprite-sidewalk.png"); animation-duration: .82s; }
-.sprite-white { background-image: url("white-cat-sprite-sidewalk.png"); animation-duration: .9s; }
+.sprite-host { background-image: url("host-sprite-sidewalk.png?v=2"); }
+.walker-host[data-outfit="hoodie"] .actor-sprite { background-image: url("host-outfit-hoodie.png?v=2"); }
+.walker-host[data-outfit="casual"] .actor-sprite { background-image: url("host-outfit-casual.png?v=2"); }
+.walker-host[data-outfit="pajamas"] .actor-sprite { background-image: url("host-outfit-pajamas.png?v=2"); }
+.walker-host[data-outfit="sport"] .actor-sprite { background-image: url("host-outfit-sport.png?v=2"); }
+.walker-host[data-outfit="bunny"] .actor-sprite { background-image: url("host-outfit-bunny.png?v=2"); }
+.walker-host[data-outfit="denim"] .actor-sprite { background-image: url("host-outfit-denim.png?v=2"); }
+.sprite-black { background-image: url("black-cat-sprite-sidewalk.png?v=2"); animation-duration: .82s; }
+.sprite-white { background-image: url("white-cat-sprite-sidewalk.png?v=2"); animation-duration: .9s; }
 .walker.is-returning .actor-sprite { transform: scaleX(-1); animation-direction: reverse; }
 .walker-host .actor-figure { height: 180px; }
 .walker-black .actor-figure, .walker-white .actor-figure { width: 128px; height: 109px; }
@@ -110,12 +110,12 @@ button:focus-visible, a:focus-visible {
 .outfit-option.is-selected { border-color: #e1c5ff; background: rgba(87,67,119,.38); box-shadow: inset 0 0 0 1px rgba(225,197,255,.22), 0 0 12px rgba(201,170,255,.16); }
 .outfit-preview { display: flex; min-height: 0; align-items: end; justify-content: center; overflow: hidden; }
 .outfit-sprite { display: block; width: min(82px, 82%); aspect-ratio: 3 / 4; background-repeat: no-repeat; background-size: 400% 100%; background-position: 66.6667% 100%; image-rendering: pixelated; filter: drop-shadow(0 4px 3px rgba(3,8,20,.35)); }
-.outfit-hoodie { background-image: url("host-outfit-hoodie.png"); }
-.outfit-casual { background-image: url("host-outfit-casual.png"); }
-.outfit-pajamas { background-image: url("host-outfit-pajamas.png"); }
-.outfit-sport { background-image: url("host-outfit-sport.png"); }
-.outfit-bunny { background-image: url("host-outfit-bunny.png"); }
-.outfit-denim { background-image: url("host-outfit-denim.png"); }
+.outfit-hoodie { background-image: url("host-outfit-hoodie.png?v=2"); }
+.outfit-casual { background-image: url("host-outfit-casual.png?v=2"); }
+.outfit-pajamas { background-image: url("host-outfit-pajamas.png?v=2"); }
+.outfit-sport { background-image: url("host-outfit-sport.png?v=2"); }
+.outfit-bunny { background-image: url("host-outfit-bunny.png?v=2"); }
+.outfit-denim { background-image: url("host-outfit-denim.png?v=2"); }
 .wardrobe-categories { display: grid; flex: 0 0 auto; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 5px; }
 .wardrobe-category { min-width: 0; padding: 5px 3px; border: 1px solid rgba(142,161,198,.3); border-radius: 6px; color: #afbdd8; background: rgba(14,24,45,.56); font-size: 10px; line-height: 1.2; cursor: pointer; transition: border-color .2s, background .2s, color .2s; }
 .wardrobe-category:hover { border-color: rgba(221,204,255,.7); color: #edf0ff; }
@@ -241,4 +241,5 @@ button:focus-visible, a:focus-visible {
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
 }
+
 
