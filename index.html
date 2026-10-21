@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#111a33">
+    <meta name="description" content="마지텐시 룰렛 - 별빛과 픽셀 캐릭터가 함께하는 도트 룰렛">
+    <title>마지텐시 룰렛</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/galmuri@2.40.3/dist/galmuri.css">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="site-shell" id="top">
+      <header class="site-header">
+        <time class="header-clock" id="header-clock" aria-label="현재 날짜와 시각">
+          <span id="clock-date"></span>
+          <span id="clock-time"></span>
+        </time>
+        <a class="brand" href="#top" aria-label="마지텐시 룰렛 홈">
+          <span>
+            <h1>마지텐시 룰렛</h1>
+          </span>
+        </a>
+        <button class="sound-toggle" id="sound-toggle" type="button" aria-pressed="true">
+          <span class="sound-icon" aria-hidden="true">♫</span>
+          <span id="sound-label">소리 켜짐</span>
+        </button>
+      </header>
+
+      <section class="scene" aria-label="천천히 산책하는 캐릭터 세 명">
+        <div class="scene-stars" aria-hidden="true">
+          <i class="star star-a">✦</i><i class="star star-b">✧</i><i class="star star-c">✦</i>
+          <i class="star star-d">✧</i><i class="star star-e">✦</i><i class="star star-f">·</i>
+          <i class="star star-g">·</i><i class="star star-h">✧</i>
+        </div>
+        <div class="actor-lane" id="actor-lane">
+          <button class="walker walker-host" type="button" data-actor="host" aria-label="마지텐시 캐릭터와 상호작용">
+            <span class="speech-bubble" aria-live="polite"></span>
+            <span class="actor-figure"><span class="actor-sprite sprite-host"></span></span>
+          </button>
+          <button class="walker walker-black" type="button" data-actor="black" aria-label="검정 고양이와 상호작용">
+            <span class="speech-bubble" aria-live="polite"></span>
+            <span class="actor-figure"><span class="actor-sprite sprite-black"></span></span>
+          </button>
+          <button class="walker walker-white" type="button" data-actor="white" aria-label="흰 고양이와 상호작용">
+            <span class="speech-bubble" aria-live="polite"></span>
+            <span class="actor-figure"><span class="actor-sprite sprite-white"></span></span>
+          </button>
+        </div>
+        <aside class="wardrobe-panel" aria-label="여성 캐릭터 의상 선택">
+          <h2 class="wardrobe-title">의상 선택</h2>
+          <div class="wardrobe-options">
+            <button class="outfit-option" type="button" data-category="child" data-outfit="hoodie" aria-label="어린이용 보라 후드 의상으로 변신" aria-pressed="false">
+              <span class="outfit-preview"><span class="outfit-sprite outfit-hoodie" aria-hidden="true"></span></span>
+            </button>
+            <button class="outfit-option" type="button" data-category="child" data-outfit="casual" aria-label="어린이용 캐주얼 의상으로 변신" aria-pressed="false">
+              <span class="outfit-preview"><span class="outfit-sprite outfit-casual" aria-hidden="true"></span></span>
+            </button>
+            <button class="outfit-option" type="button" data-category="child" data-outfit="pajamas" aria-label="어린이용 양 파자마 의상으로 변신" aria-pressed="false">
+              <span class="outfit-preview"><span class="outfit-sprite outfit-pajamas" aria-hidden="true"></span></span>
+            </button>
+            <button class="outfit-option" type="button" data-category="adult" data-outfit="sport" aria-label="성인용 스포츠 의상으로 변신" aria-pressed="false" hidden>
+              <span class="outfit-preview"><span class="outfit-sprite outfit-sport" aria-hidden="true"></span></span>
+            </button>
+            <button class="outfit-option" type="button" data-category="adult" data-outfit="bunny" aria-label="성인용 토끼 콘셉트 의상으로 변신" aria-pressed="false" hidden>
+              <span class="outfit-preview"><span class="outfit-sprite outfit-bunny" aria-hidden="true"></span></span>
+            </button>
+            <button class="outfit-option" type="button" data-category="adult" data-outfit="denim" aria-label="성인용 데님 의상으로 변신" aria-pressed="false" hidden>
+              <span class="outfit-preview"><span class="outfit-sprite outfit-denim" aria-hidden="true"></span></span>
+            </button>
+          </div>
+          <div class="wardrobe-categories" role="group" aria-label="의상 카테고리">
+            <button class="wardrobe-category is-selected" type="button" data-outfit-category="child" aria-pressed="true">어린이용</button>
+            <button class="wardrobe-category" type="button" data-outfit-category="adult" aria-pressed="false">성인용</button>
+          </div>
+        </aside>
+        <div class="scene-ground" aria-hidden="true">
+          <span class="ground-line"></span><span class="ground-glow"></span>
+          <span class="ground-pixel pixel-one"></span><span class="ground-pixel pixel-two"></span>
+          <span class="ground-pixel pixel-three"></span><span class="ground-pixel pixel-four"></span>
+        </div>
+      </section>
+
+      <main class="dashboard">
+        <section class="panel roulette-panel" aria-label="후원 룰렛">
+          <div class="tier-picker" id="tier-picker" role="group" aria-label="후원 개수 선택">
+            <button type="button" class="tier-button" data-tier="2000">2,000개</button>
+            <button type="button" class="tier-button" data-tier="3000">3,000개</button>
+            <button type="button" class="tier-button" data-tier="5000">5,000개</button>
+            <button type="button" class="tier-button" data-tier="20000">20,000개</button>
+            <button type="button" class="tier-button" data-tier="30000">30,000개</button>
+            <button type="button" class="tier-button" data-tier="50000">50,000개</button>
+          </div>
+
+          <div class="wheel-layout">
+            <div class="wheel-column">
+              <div class="wheel-stage" id="wheel-stage">
+                <div class="sparkle-layer" aria-hidden="true">
+                  <i>✦</i><i>✧</i><i>·</i><i>✦</i><i>✧</i><i>·</i><i>✦</i><i>✧</i>
+                </div>
+                <div class="wheel-pointer" aria-hidden="true"><span></span></div>
+                <button class="wheel-shell" id="wheel-shell" type="button" aria-label="선택된 후원 룰렛 돌리기">
+                  <span class="wheel-rotor" id="wheel-rotor"><canvas id="wheel-canvas" width="192" height="192" aria-hidden="true"></canvas></span>
+                  <span class="wheel-center" aria-hidden="true"><span>GO!</span></span>
+                </button>
+              </div>
+              <div class="selected-tier">
+                <span class="selected-label">선택한 룰렛</span>
+                <strong id="selected-tier-name">2,000개</strong>
+              </div>
+              <button class="spin-button" id="spin-button" type="button">
+                <span class="button-star" aria-hidden="true">✦</span> 룰렛 돌리기
+              </button>
+              <div class="result-card" id="result-card" aria-live="polite">
+                <span class="result-kicker">이번 결과</span>
+                <strong id="result-text">룰렛을 돌려 결과를 확인하세요</strong>
+              </div>
+            </div>
+
+            <aside class="prize-panel" aria-label="룰렛 항목 목록">
+              <ul class="prize-list" id="prize-list"></ul>
+              <div class="history-box">
+                <div class="history-heading">
+                  <h3>최근 결과</h3>
+                  <div class="history-actions">
+                    <button class="history-reset" id="history-reset" type="button" aria-label="오늘 최근 결과 기록 초기화">오늘 초기화</button>
+                  </div>
+                </div>
+                <ol id="history-list" class="history-list"></ol>
+              </div>
+            </aside>
+          </div>
+        </section>
+      </main>
+
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
